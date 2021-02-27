@@ -48,7 +48,8 @@ const BlogPostTemplate = ({ data: { previous, next, post } }) => {
         <hr />
 
         <footer>
-        {/*   <Bio />  */}
+        {/* commenting out Bio from the footer
+          <Bio />  */}
         </footer>
       </article>
 
