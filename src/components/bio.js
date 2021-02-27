@@ -13,8 +13,8 @@ const Bio = () => {
     query BioQuery {
       # if there was more than one user, this would need to be filtered
       author: wpUser {
-        firstName: Joshua
-        twitter: @joshuajames
+        firstName
+        twitter: name
         description
         avatar {
           url
