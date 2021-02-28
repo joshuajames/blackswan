@@ -107,19 +107,19 @@ var plugins = [{
   plugin: __webpack_require__(/*! ./node_modules/gatsby-plugin-manifest/gatsby-ssr */ "./node_modules/gatsby-plugin-manifest/gatsby-ssr.js"),
   options: {
     "plugins": [],
-    "name": "Gatsby Starter WordPress Blog",
-    "short_name": "GatsbyJS & WP",
+    "name": "Black Swan Farming",
+    "short_name": "BSF",
     "start_url": "/",
     "background_color": "#ffffff",
     "theme_color": "#663399",
     "display": "minimal-ui",
-    "icon": "content/assets/gatsby-icon.png",
+    "icon": "static/android-chrome-512x512.png",
     "legacy": true,
     "theme_color_in_head": true,
     "cache_busting_mode": "query",
     "crossOrigin": "anonymous",
     "include_favicon": true,
-    "cacheDigest": "4a9773549091c227cd2eb82ccd9c5e3a"
+    "cacheDigest": "92ae69ec4a53b36d601a86151c6941b5"
   }
 }, {
   plugin: __webpack_require__(/*! ./node_modules/gatsby-plugin-react-helmet/gatsby-ssr */ "./node_modules/gatsby-plugin-react-helmet/gatsby-ssr.js"),
