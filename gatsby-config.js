@@ -31,7 +31,7 @@ module.exports = {
           `https://blackswanfarming.com/graphql`,
       },
       schema: {
-        requestConcurrency: 5, // currently set to 15
+        requestConcurrency: 3, // currently set to 15
         previewRequestConcurrency: 1, // currently set to 5
       }
     },
