@@ -42,7 +42,7 @@ const Bio = () => {
           {` `}
           {author?.twitter && (
             <a href={`https://twitter.com/${author?.twitter || ``}`}>
-              You should follow her on Twitter
+              You should follow them on Twitter
             </a>
           )}
         </p>
