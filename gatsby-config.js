@@ -29,11 +29,14 @@ module.exports = {
         url:
           process.env.WPGRAPHQL_URL ||
           `https://blackswanfarming.com/graphql`,
+          
+          // not sure if this is supposed to go here or after the next close bracket?
+          schema: {
+            requestConcurrency: 3, // currently set to 15
+            previewRequestConcurrency: 1, // currently set to 5
+          }
       },
-      schema: {
-        requestConcurrency: 3, // currently set to 15
-        previewRequestConcurrency: 1, // currently set to 5
-      }
+      
     },
 
     /**
