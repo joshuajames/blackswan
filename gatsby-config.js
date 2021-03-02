@@ -32,8 +32,8 @@ module.exports = {
           
           // not sure if this is supposed to go here or after the next close bracket?
           schema: {
-            requestConcurrency: 3, // currently set to 15
-            previewRequestConcurrency: 1, // currently set to 5
+            requestConcurrency: 2, // originally set to 15
+            previewRequestConcurrency: 1, // originally set to 5
           }
       },
       
