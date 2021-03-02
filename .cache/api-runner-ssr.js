@@ -1,8 +1,10 @@
 var plugins = [{
-      plugin: require('/Users/joshua/Dev/git/bsf/node_modules/gatsby-plugin-manifest/gatsby-ssr'),
+      name: 'gatsby-plugin-manifest',
+      plugin: require('/Users/joshua/Dev/git/oyu/blackswan/node_modules/gatsby-plugin-manifest/gatsby-ssr'),
       options: {"plugins":[],"name":"Gatsby Starter WordPress Blog","short_name":"GatsbyJS & WP","start_url":"/","background_color":"#ffffff","theme_color":"#663399","display":"minimal-ui","icon":"content/assets/gatsby-icon.png","legacy":true,"theme_color_in_head":true,"cache_busting_mode":"query","crossOrigin":"anonymous","include_favicon":true,"cacheDigest":"4a9773549091c227cd2eb82ccd9c5e3a"},
     },{
-      plugin: require('/Users/joshua/Dev/git/bsf/node_modules/gatsby-plugin-react-helmet/gatsby-ssr'),
+      name: 'gatsby-plugin-react-helmet',
+      plugin: require('/Users/joshua/Dev/git/oyu/blackswan/node_modules/gatsby-plugin-react-helmet/gatsby-ssr'),
       options: {"plugins":[]},
     }]
 // During bootstrap, we write requires at top of this file which looks like:
@@ -31,11 +33,21 @@ module.exports = (api, args, defaultReturn, argTransform) => {
     if (!plugin.plugin[api]) {
       return undefined
     }
-    const result = plugin.plugin[api](args, plugin.options)
-    if (result && argTransform) {
-      args = argTransform({ args, result })
+    try {
+      const result = plugin.plugin[api](args, plugin.options)
+      if (result && argTransform) {
+        args = argTransform({ args, result })
+      }
+      return result
+    } catch (e) {
+      if (plugin.name !== `default-site-plugin`) {
+        // default-site-plugin is user code and will print proper stack trace,
+        // so no point in annotating error message pointing out which plugin is root of the problem
+        e.message += ` (from plugin: ${plugin.name})`
+      }
+
+      throw e
     }
-    return result
   })
 
   // Filter out undefined results.
