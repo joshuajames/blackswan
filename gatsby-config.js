@@ -30,7 +30,7 @@ module.exports = {
           process.env.WPGRAPHQL_URL ||
           `https://blackswanfarming.com/graphql`,
           
-          // not sure if this is supposed to go here or after the next close bracket?
+          // putting the brakes on so the Wordpress server doesn't panic...
           schema: {
             requestConcurrency: 0, // originally set to 15
             previewRequestConcurrency: 0, // originally set to 5
