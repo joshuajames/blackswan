@@ -10524,6 +10524,11 @@
   "resolved" "https://registry.npmjs.org/node-addon-api/-/node-addon-api-3.1.0.tgz"
   "version" "3.1.0"
 
+"node-bin-setup@^1.0.0":
+  "integrity" "sha512-uPIxXNis1CRbv1DwqAxkgBk5NFV3s7cMN/Gf556jSw6jBvV7ca4F9lRL/8cALcZecRibeqU+5dFYqFFmzv5a0Q=="
+  "resolved" "https://registry.npmjs.org/node-bin-setup/-/node-bin-setup-1.0.6.tgz"
+  "version" "1.0.6"
+
 "node-eta@^0.9.0":
   "integrity" "sha1-n7CwmbzSoCGUDmA8ZCVNwAPZp6g="
   "resolved" "https://registry.npmjs.org/node-eta/-/node-eta-0.9.0.tgz"
@@ -10548,6 +10553,13 @@
   "integrity" "sha512-zR6HoT6LrLCRBwukmrVbHv0EpEQjksO6GmFcZQQuCAy139BEsoVKPYnf3jongYW83fAa1torLGYwxxky/p28sg=="
   "resolved" "https://registry.npmjs.org/node-releases/-/node-releases-1.1.71.tgz"
   "version" "1.1.71"
+
+"node@^15.10.0":
+  "integrity" "sha512-JboERsul33BpTDeth8SsGWg/gTZfNEWGMT5HVqIoyepRwAARznCjwdWvLHHd/A9bvAYFp5zaq46RnVArWz44kA=="
+  "resolved" "https://registry.npmjs.org/node/-/node-15.10.0.tgz"
+  "version" "15.10.0"
+  dependencies:
+    "node-bin-setup" "^1.0.0"
 
 "noms@0.0.0":
   "integrity" "sha1-2o69nzr51nYJGbJ9nNyAkqczKFk="
