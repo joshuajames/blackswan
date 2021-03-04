@@ -34,7 +34,7 @@ module.exports = {
           schema: {
             requestConcurrency: 0, // originally set to 15
             previewRequestConcurrency: 0, // originally set to 5
-          //  options.schema.timeout: 40000 // original setting is 30000
+            options.schema.timeout: 40000, // original setting is 30000
           }
       },
     },
