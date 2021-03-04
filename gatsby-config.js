@@ -32,9 +32,9 @@ module.exports = {
           
           // putting the brakes on so the Wordpress server doesn't panic...
           schema: {
-            requestConcurrency: 0, // originally set to 15
-            previewRequestConcurrency: 0, // originally set to 5
-            timeout: 40000, // original setting is 30000
+            requestConcurrency: 2, // originally set to 15
+            previewRequestConcurrency: 2, // originally set to 5
+            timeout: 50000, // original setting is 30000
           }
       },
     },
